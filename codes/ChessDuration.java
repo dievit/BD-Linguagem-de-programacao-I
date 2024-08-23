@@ -14,7 +14,13 @@ public class ChessDuration {
         System.out.println("Digite a hora final do jogo: ");
         int hora2 = scanner.nextInt();
 
-        int horaTotal = (24 - hora1) + hora2;
+        int horaTotal;
+
+        if (hora2 > hora1) {
+            horaTotal = hora2 - hora1;
+        } else {
+            horaTotal = (24 - hora1) + hora2;
+        }
 
         System.out.println("A duração do jogo foi de: " + horaTotal + " horas");
 
